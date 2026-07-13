@@ -10,6 +10,7 @@ def test_factory(factory: CreatureFactory) -> None:
     print(evolved.describe())
     print(evolved.attack())
 
+
 def test_battle(f1: CreatureFactory, f2: CreatureFactory) -> None:
     print("Testing battle")
     c1 = f1.create_base()
@@ -21,15 +22,16 @@ def test_battle(f1: CreatureFactory, f2: CreatureFactory) -> None:
     print(c1.attack())
     print(c2.attack())
 
+
 def main() -> None:
     flame = FlameFactory()
     aqua = AquaFactory()
-    
     test_factory(flame)
     print()
     test_factory(aqua)
     print()
     test_battle(flame, aqua)
+
 
 if __name__ == "__main__":
     main()
